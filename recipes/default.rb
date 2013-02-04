@@ -33,7 +33,7 @@ end
 package "collectd" do
   package_name "collectd"
   options "--force-yes"
-  version ">= 5.2"
+  version "5.2"
   action :install
 end
 
