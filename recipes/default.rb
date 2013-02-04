@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-
+# TODO: create own ppa
 apt_repository "collectd-ppa" do
   uri "http://ppa.launchpad.net/nikicat/collectd/ubuntu"
   distribution "precise"
