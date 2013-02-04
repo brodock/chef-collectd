@@ -32,6 +32,8 @@ end
 
 package "collectd" do
   package_name "collectd"
+  options "--force-yes"
+  action :install
 end
 
 service "collectd" do
