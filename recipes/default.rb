@@ -21,11 +21,11 @@ include_recipe "apt"
 
 # TODO: create own ppa
 apt_repository "collectd-ppa" do
-  uri "http://ppa.launchpad.net/nikicat/collectd/ubuntu"
+  uri "http://ppa.launchpad.net/vbulax/collectd5/ubuntu"
   distribution "precise"
   components ["main"]
   keyserver "keyserver.ubuntu.com"
-  key "98080A60"
+  key "013B9839"
   action :add
   notifies :run, "execute[apt-get update]", :immediately
 end
@@ -33,6 +33,7 @@ end
 package "collectd" do
   package_name "collectd"
   options "--force-yes"
+  version ">= 5.2"
   action :install
 end
 
