@@ -17,8 +17,19 @@
 # limitations under the License.
 #
 
+
+apt_repository "collectd-ppa" do
+  uri "http://ppa.launchpad.net/joey-imbasciano/collectd5/ubuntu"
+  distribution "precise"
+  components ["main"]
+  keyserver "keyserver.ubuntu.com"
+  key "5FDB7EBD"
+  action :add
+  notifies :run, "execute[apt-get update]", :immediately
+end
+
 package "collectd" do
-  package_name "collectd-core"
+  package_name "collectd"
 end
 
 service "collectd" do
