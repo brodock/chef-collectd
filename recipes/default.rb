@@ -19,11 +19,11 @@
 
 
 apt_repository "collectd-ppa" do
-  uri "http://ppa.launchpad.net/joey-imbasciano/collectd5/ubuntu"
+  uri "http://ppa.launchpad.net/nikicat/collectd/ubuntu"
   distribution "precise"
   components ["main"]
   keyserver "keyserver.ubuntu.com"
-  key "5FDB7EBD"
+  key "98080A60"
   action :add
   notifies :run, "execute[apt-get update]", :immediately
 end
