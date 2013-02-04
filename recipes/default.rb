@@ -26,6 +26,7 @@ apt_repository "collectd-ppa" do
   components ["main"]
   keyserver "keyserver.ubuntu.com"
   key "013B9839"
+  response_file "collectd.seed"
   action :add
   notifies :run, "execute[apt-get update]", :immediately
 end
