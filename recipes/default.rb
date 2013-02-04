@@ -26,7 +26,6 @@ apt_repository "collectd-ppa" do
   components ["main"]
   keyserver "keyserver.ubuntu.com"
   key "013B9839"
-  response_file "collectd.seed"
   action :add
   notifies :run, "execute[apt-get update]", :immediately
 end
@@ -35,6 +34,7 @@ package "collectd" do
   package_name "collectd"
   options "--force-yes"
   version "5.2.0-2ubuntu1"
+  response_file "collectd.seed"
   action :install
 end
 
