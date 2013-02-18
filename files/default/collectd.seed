@@ -1,0 +1,2 @@
+collectd-core   collectd/auto-migrate-3-4       boolean true
+collectd-core   collectd/auto-migrate-4-5       boolean true
